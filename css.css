@@ -1,0 +1,43 @@
+.box{
+	width: 500px;
+	height: 500px;
+	margin: 50px auto;
+}
+.box ul li{
+	float: left;
+	list-style: none;
+	text-align: center;
+	width: 200px;
+	height: 200px;
+	margin: 10px;
+	border: 5px solid #979797;
+	position: relative;
+	overflow: hidden;
+
+}
+.box ul li .cover{
+	width: 200px;
+	height: 200px;
+	color: #eee;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: rgba(45,45,45,0.5);
+	transition: all 0.5s;
+	
+}
+.box ul li:first-child .cover{
+	transform: rotate(90deg);
+	transform-origin: right bottom;
+}
+.box ul li:last-child .cover{
+	transform: rotate(-90deg);
+	transform-origin: left bottom;
+}
+.box ul li:hover .cover{
+	transform: rotate(0deg);
+}
+.box ul li .cover p{
+	font-size: 24px;
+	line-height: 20px;
+}
